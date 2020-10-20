@@ -44,6 +44,7 @@
         android:layout_marginTop="16dp"
         android:background="@drawable/shadow"
         android:elevation="10dp"
+        android:onClick="signUp"
         android:text="Continue"
         android:textColor="#ffffff"
         app:layout_constraintEnd_toEndOf="parent"
