@@ -1,6 +1,6 @@
 package com.example.ezparkjava
 
-//import android.R.layout
+
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -18,12 +18,8 @@ import com.google.firebase.auth.FirebaseAuth
 
 //import com.example.ezparkjava.model.Map
 //import com.example.ezparkjava.model.Place
-//
-//const val USER_MAP = "USER_MAP"
-//private const val TAG = "MapsAdapter"
+
 class MainActivity : AppCompatActivity() {
-//    lateinit var ezPark_Dao: ezParkDao
-//    lateinit var ezPark_Db: ezParkDb
 
     private lateinit var auth: FirebaseAuth
 
@@ -35,8 +31,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-//        val Map = generateCarparkData()
-
 //        auth = FirebaseAuth.getInstance()
 //        val user = FirebaseAuth.getInstance().currentUser
 
@@ -47,7 +41,6 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
-//        val yourDefaultWebClientId = 253566006779
         val gso : GoogleSignInOptions =
             GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
@@ -80,7 +73,7 @@ class MainActivity : AppCompatActivity() {
             val account : GoogleSignInAccount = completedTask.getResult(ApiException::class.java)!!
 
             // Signed in successfully, show authenticated UI.
-            val intent = Intent(this, FavouriteActivity::class.java)
+            val intent = Intent(this, CoreActivity::class.java)
             startActivity(intent)
         } catch (e: ApiException) {
             // The ApiException status code indicates the detailed failure reason.
@@ -88,19 +81,6 @@ class MainActivity : AppCompatActivity() {
             Log.w("Error", "signInResult:failed code=" + e.statusCode)
         }
     }
-
-//    private fun generateCarparkData(): List<Map>{
-//        return listOf(
-//            Map("Favourites",
-//                listOf(
-//                    Place("Block 757a HDB Woodlands (MSCP)",1.44607,103.79389),
-//                    Place("Block 739a HDB Woodlands (MSCP)",1.44452,103.79680),
-//                    Place("Northpoint City Car Park",1.42751,103.83713),
-//                    Place("Block 115B HDB Yishun (MSCP)",1.43340,103.82712)
-//                ))
-//        )
-//
-//    }
 
     fun signUpPage(view: View) {
         val intent = Intent(this, SignUpPage::class.java)

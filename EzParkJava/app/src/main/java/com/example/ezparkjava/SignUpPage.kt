@@ -6,8 +6,6 @@ import android.text.TextUtils
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.room.Room
-import database.ezParkDb
 import kotlinx.android.synthetic.main.activity_sign_up_page.*
 
 
@@ -66,7 +64,6 @@ class SignUpPage : AppCompatActivity() {
 
         if (validCheck) {
             Toast.makeText(this, "CLEAR", Toast.LENGTH_LONG).show()
-//            ezParkDb.get(application).getEzParkDao().checkUniqueUser(username)
         }
 
 

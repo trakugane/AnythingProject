@@ -3,4 +3,6 @@
     <string name="title_activity_display_map">Map</string>
     <string name="map_key" translatable="false">AIzaSyA68iAwgvlxjZBD00K8IBvRJy2qI1K2UkI</string>
     <string name="title_activity_display_maps">Map</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 </resources>
